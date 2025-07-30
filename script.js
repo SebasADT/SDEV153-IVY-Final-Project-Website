@@ -162,11 +162,59 @@ document.querySelectorAll("input[name='tripFormat']").forEach(radio =>
   radio.addEventListener("change", updateEvents))
 	
 //Add event listener to 'editOptions' button
-document.getElementById("editOptions").addEventListener("click", eddtOptionsClick)
+document.getElementById("editOptions").addEventListener("click", eddtOptionsClick);
 
 
 
 // Function to handle edit options button click to allow changes to the events once the season and trip type have been selected
 function editOptionsClick() {
-	
+  const events = document.querySelectorAll("input[name='events']");
+  const tripFormats = document.querySelectorAll("input[name='tripFormat']");
+  
+  // Enable all checkboxes
+  events.forEach(event => {
+	event.disabled = false;
+  });
+  tripFormats.forEach(format => {
+	format.disabled = false;
+  });
+  
+  // Change the button text to 'Save Changes'
+  this.textContent = "Save Changes";
+  
+  // Add a click event listener to save changes
+  this.removeEventListener("click", editOptionsClick);
+  this.addEventListener("click", saveChangesClick);
 }
+
+// Function to handle save changes button click
+function saveChangesClick() {
+  const events = document.querySelectorAll("input[name='events']");
+  const tripFormats = document.querySelectorAll("input[name='tripFormat']");
+  
+  // Disable all checkboxes
+  events.forEach(event => {
+	event.disabled = true;
+  });
+  tripFormats.forEach(format => {
+	format.disabled = true;
+  });
+  
+  // Change the button text back to 'Edit Options'
+  this.textContent = "Edit Options";
+  
+  // Add a click event listener to edit options again
+  this.removeEventListener("click", saveChangesClick);
+  this.addEventListener("click", editOptionsClick);
+}
+// Function to handle form submission
+document.querySelector("form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the default form submission
+  
+  // Display confirmation message
+  const confirmationMessage = document.getElementById("confirmationMessage");
+  confirmationMessage.style.display = "block";
+  
+  // Optionally, you can clear the form fields after submission
+  this.reset();
+});
