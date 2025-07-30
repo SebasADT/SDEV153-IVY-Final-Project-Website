@@ -162,7 +162,7 @@ document.querySelectorAll("input[name='tripFormat']").forEach(radio =>
   radio.addEventListener("change", updateEvents))
 	
 //Add event listener to 'editOptions' button
-document.getElementById("editOptions").addEventListener("click", editOptionsClick);
+document.getElementById("editOptions").addEventListener("click", eddtOptionsClick);
 
 
 
