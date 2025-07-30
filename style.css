@@ -1,0 +1,240 @@
+/* Website Style */
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+body {
+  margin: 0; /* Reset default body margin */
+}
+
+/* Header/Navigation Bar Style */
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack items vertically on smaller screens */
+  justify-content: center; /* Center items */
+  align-items: center;
+  background-color: #15cb4c;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 0; /* Add vertical margin for spacing */
+  text-align: center; /* Center text */
+}
+
+/* Home Logo */
+#logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px; /* Slightly smaller font size */
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+/* Nav Link: Offers */
+#offers {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%; /* Adjust width to content */
+}
+
+/* Nav Link: Book Now */
+#bookNow {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%; /* Adjust width to content */
+}
+
+/* Nav Link: About Us */
+#aboutUs {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%; /* Adjust width to content */
+}
+
+/* Form Style */
+#travelInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5%;
+  margin-bottom: 5%;
+  font-size: 18px; /* Slightly smaller font size */
+  padding: 0 10px; /* Add horizontal padding */
+}
+
+input, textarea, select {
+  display: inline-block;
+  border-color: black;
+  margin-bottom: 10px; /* Add some space below */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+label { 
+  margin-bottom: 5px; /* Add some space below */
+}
+
+fieldset {
+  border: 2px solid green; /* Set a green border */
+  padding: 10px; /* Add padding */
+  margin: 20px 0; /* Add margin */
+}
+
+legend {
+  color: green; /* Style the legend text */
+  font-weight: bold; /* Make the legend text bold */
+}
+.summary {
+  margin-top: 2em;
+  border-top: 1px solid #ccc;
+  padding-top: 1em;
+}
+
+button[type="submit"] {
+  border: 2px solid green;
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  color: green;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%; /* Make button full width */
+  box-sizing: border-box;
+}
+
+button[type="submit"]:hover {
+  background-color: #e8f5e8;
+}
+
+
+/* Footer Style */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #15cb4c;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/*Media Changes - Tablet*/
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row; /* Change to horizontal layout on larger screens */
+    justify-content: space-between; /* Space items evenly */
+  }
+  #logo {
+    margin-right: auto; /* Push logo to the left */
+  }
+  #offers, #bookNow, #aboutUs {
+    margin: 0 10px;
+  }
+  #travelInfo {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-size: 20px; /* Slightly larger font size */
+    padding: 0 20px; /* Add horizontal padding */
+  }
+  input, textarea {
+    width: 100%; /* Make input fields full width */
+  }
+  select {
+	width: 20%
+  }
+  
+  fieldset > label > input{
+	  width: 20%
+  }
+  button[type="submit"] {
+    width: auto; /* Reset button width */
+    padding: 10px 20px; /* Add padding */
+    margin: 20px 0;
+  }
+  footer {
+    position: static; /* Reset footer position */
+    margin-top: 20px;
+  }
+  #editOptions {
+    display: none;
+  }
+  
+}
+
+/*Media Changes - Desktop*/
+@media (min-width: 1024px) {
+  #travelInfo {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-size: 22px; /* Slightly larger font size */
+    padding: 0 30px; /* Add horizontal padding */
+  }
+  #offers, #bookNow, #aboutUs {
+    margin: 0 10px;
+	width: fit-content;
+  }
+  input, textarea, select {
+    width: 100%; /* Make input fields full width */
+    max-width: 600px; /* Set a maximum width */
+  }
+  button[type="submit"] {
+    width: auto; /* Reset button width */
+    padding: 10px 20px; /* Add padding */
+    margin: 20px 0;
+  }
+  footer {
+    position: static; /* Reset footer position */
+    margin-top: 20px;
+  }
+  #editOptions {
+    display: none;
+  }
+}
+
+
+label > span::after {
+  content: '*';
+  color: red;
+  font-weight: bold;
+}
+
+.required2::before {
+  content: '*';
+  color: red;
+  font-weight: bold;
+}
