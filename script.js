@@ -208,7 +208,8 @@ function saveChangesClick() {
   this.addEventListener("click", editOptionsClick);
 }
 // Function to handle form submission
-document.querySelector("form").addEventListener("submit", function(event) {
+let submitBtn = document.getElementById("submitBtn");
+submitBtn.addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent the default form submission
   
   // Display confirmation message
