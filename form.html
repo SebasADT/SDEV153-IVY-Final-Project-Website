@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Book Now</title>
+  <link rel="icon" type="image/png" href="Great Lakes Travel.png" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<header>
+  <nav>
+    <a href="index.html" id="logo"><img src="Great Lakes Travel.png" alt="Great Lakes Travel Logo" width="30"
+        height="30">Great Lakes Travel</a>
+    <a href="aboutUs.html" id="aboutUs">About Us</a>
+    <a href="offers.html" id="offers">Offers</a>
+    <a href="form.html" id="bookNow">Book Now</a>
+  </nav>
+</header>
+
+<body>
+
+  <form id="travelInfo">
+    <fieldset>
+      <legend>Travel Info:</legend>
+      <fieldset id="customerInfo">
+        <legend>Customer Info:</legend>
+        <label class="required1">Full name: (first and last)<br>
+          <input type="name" id="name" name="name" required>
+        </label><br>
+        <label class="required1">Phone number:<br>
+          <input type="tel" id="phone" name="phone" required>
+        </label><br>
+        <label class="required1">Email:<br>
+          <input type="email" id="email" name="email" required>
+        </label><br>
+        <label class="required1">Date of travel:<br>
+          <input type="datetime-local" id="delivery-time" name="delivery-time" required>
+        </label><br>
+        <span class="required2">Field Required</span>
+      </fieldset>
+
+      <fieldset id="destination">
+        <legend>Destination:</legend>
+        <label class="required1">Lake:<br>
+          <select name="lake" id="lake">
+            <option value="Superior">Superior</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Huron">Huron</option>
+            <option value="Erie">Erie</option>
+            <option value="Ontario">Ontario</option>
+          </select>
+        </label><br>
+        <label class="required1">City:<br>
+          <select name="city" id="city">
+            <option value="Sault Ste Marie, MI">Sault Ste Marie, MI</option>
+            <option value="Marquette, MI">Marquette, MI</option>
+            <option value="Traverse City, MI">Traverse City, MI</option>
+            <option value="Grand Haven, MI">Grand Haven, MI</option>
+            <option value="Muskegon, MI">Muskegon, MI</option>
+            <option value="Kalamazoo, MI">Kalamazoo, MI</option>
+            <option value="Lansing, MI">Lansing, MI</option>
+            <option value="Detroit, MI">Detroit, MI</option>
+            <option value="Flint, MI">Flint, MI</option>
+            <option value="Saginaw, MI">Saginaw, MI</option>
+            <option value="Bay City, MI">Bay City, MI</option>
+            <option value="Port Huron, MI">Port Huron, MI</option>
+            <option value="Toledo, OH">Toledo, OH</option>
+            <option value="Cleveland, OH">Cleveland, OH</option>
+            <option value="Erie, PA">Erie, PA</option>
+            <option value="Buffalo, NY">Buffalo, NY</option>
+            <option value="Rochester, NY">Rochester, NY</option>
+            <option value="Milwaukee, WI">Milwaukee, WI</option>
+            <option value="Green Bay, WI">Green Bay, WI</option>
+            <option value="Chicago, IL">Chicago, IL</option>
+          </select>
+        </label><br>
+      </fieldset>
+
+      <fieldset id="season">
+        <legend>Season of Travel:</legend>
+        <label><input type="radio" name="season" value="Summer" required /> Summer</label><br>
+        <label><input type="radio" name="season" value="Winter" /> Winter</label><br>
+        <label><input type="radio" name="season" value="Spring" /> Spring</label><br>
+        <label><input type="radio" name="season" value="Fall" /> Fall</label><br>
+      </fieldset>
+      <fieldset id="typeOfTrip">
+        <legend>Type of trip:</legend>
+        <label><input type="radio" name="tripFormat" value="Free Select" required /> Free Select</label><br>
+        <label><input type="radio" name="tripFormat" value="Relaxation" /> Relaxation</label><br>
+        <label><input type="radio" name="tripFormat" value="Adventure" /> Adventure</label><br>
+        <label><input type="radio" name="tripFormat" value="Beach Exploration" /> Beach Exploration</label><br>
+        <label><input type="radio" name="tripFormat" value="Winter Escape" /> Winter Escape</label><br>
+        <label><input type="radio" name="tripFormat" value="Camp" /> Camp</label><br>
+        <label><input type="radio" name="tripFormat" value="Group" /> Group</label><br>
+        <label><input type="radio" name="tripFormat" value="Solo" /> Solo</label><br>
+        <label><input type="radio" name="tripFormat" value="Family" /> Family</label><br>
+      </fieldset>
+
+      <fieldset id="travelers">
+        <legend>Number of Travelers</legend>
+        <label>Number of Travelers
+          <select id="style" name="style">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6+">6+</option>
+          </select></label><br>
+      </fieldset>
+
+      <fieldset id="events">
+        <legend>Events</legend>
+        <label><input type="checkbox" name="events" value="Festivals" /> Festivals</label><br>
+        <label><input type="checkbox" name="events" value="Foliage" /> Foliage</label><br>
+        <label><input type="checkbox" name="events" value="Fishing" /> Fishing</label><br>
+        <label><input type="checkbox" name="events" value="Hikes" /> Hikes</label><br>
+        <label><input type="checkbox" name="events" value="Skiing" /> Skiing</label><br>
+        <label><input type="checkbox" name="events" value="Snowboarding" /> Snowboarding</label><br>
+        <label><input type="checkbox" name="events" value="Snowshoeing" /> Snowshoeing</label><br>
+        <label><input type="checkbox" name="events" value="Snowmobiling" /> Snowmobiling</label><br>
+        <label><input type="checkbox" name="events" value="Kids Camp" /> Kids Camp</label><br>
+        <label><input type="checkbox" name="events" value="Beach Relaxation" /> Beach Relaxation</label><br>
+        <label><input type="checkbox" name="events" value="Beach Fishing" /> Beach Fishing</label><br>
+        
+        <button id="editOptions"> Edit Options</button><br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Extra Info:</legend>
+        <label for="instructions">Add any info that would be important to know during your trip. We'll try and make sure anything you put is accounted for and worked out for your trip.<br>
+          <textarea id="instructions" name="instructions" rows="4" cols="40"></textarea></label><br>
+        <br>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+
+  <script src="script.js"></script>
+
+</body>
+<footer>
+  <p>Copyright 2025 - Great Lakes Travel Company</p>
+</footer>
+
+</html>
