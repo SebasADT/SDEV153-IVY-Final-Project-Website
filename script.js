@@ -74,9 +74,6 @@ function updateEvents() {
 			if (eventValue === "Hikes" || eventValue === "Fishing") {
 			  event.disabled = false;
 			}
-			else if (eventValue === ) {
-				
-			}
 			break;
 		  case "Relaxation":
 			if (eventValue === "Beach Relaxation" || eventValue === "Festivals") {
