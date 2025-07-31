@@ -31,7 +31,7 @@ nav a {
   font-weight: bold; /* Make the text bold */
   color: white; /* Set text color to white */
   text-decoration: none; /* Remove underline from links */
-  margin: 5px; /* Add space between links */
+  margin: 0, 5px; /* Add space between links */
   transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
 }
 
