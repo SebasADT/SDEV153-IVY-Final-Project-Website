@@ -24,7 +24,6 @@ nav {
   position: fixed; /* Fix the nav at the top */
   top: 0;
   width: 100%; /* Full width */
-  z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 nav a {
