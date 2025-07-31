@@ -16,7 +16,7 @@ body {
 
 /* Header/Navigation Bar Style */
 nav {
-  display: flex; /* Use flexbox for layout */
+  display: block; /* Use block display for nav */
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */
   background-color: #15cb4c; /* Set background color */
