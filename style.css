@@ -21,13 +21,18 @@ nav {
   align-items: center; /* Center items horizontally */
   background-color: #15cb4c; /* Set background color */
   padding: 10px; /* Add padding around the nav */
-  position: fixed; /* Fix the nav at the top */
+  position: relative; /* Fix the nav at the top */
   top: 0;
   width: 100%; /* Full width */
 }
 
 nav a {
   font-size: 16px; /* Set font size for navigation links */
+  align-items: center; /* Center items vertically */;
+  display: inline-block; /* Make links inline-block for better spacing */
+  padding: 10px 15px; /* Add padding for better click area */
+  border-radius: 5px; /* Add rounded corners */
+  text-align: center; /* Center text within links */
   font-weight: bold; /* Make the text bold */
   color: white; /* Set text color to white */
   text-decoration: none; /* Remove underline from links */
