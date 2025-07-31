@@ -12,6 +12,7 @@ img {
 
 body {
   margin: 0; /* Reset default body margin */
+  padding: 0; /* Reset default body padding */
 }
 
 /* Header/Navigation Bar Style */
