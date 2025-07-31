@@ -16,34 +16,33 @@ body {
 
 /* Header/Navigation Bar Style */
 nav {
-  width: 100%;
-  display: flex;
-  flex-direction: column; /* Stack items vertically on smaller screens */
-  justify-content: center; /* Center items */
-  align-items: center;
-  background-color: #15cb4c;
-  padding: 10px;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  background-color: #15cb4c; /* Set background color */
+  padding: 10px; /* Add padding around the nav */
+  position: fixed; /* Fix the nav at the top */
+  top: 0;
+  width: 100%; /* Full width */
+  z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin: 5px 0; /* Add vertical margin for spacing */
-  text-align: center; /* Center text */
+  font-size: 16px; /* Set font size for navigation links */
+  font-weight: bold; /* Make the text bold */
+  color: white; /* Set text color to white */
+  text-decoration: none; /* Remove underline from links */
+  margin: 5px; /* Add space between links */
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
 }
 
 /* Home Logo */
 #logo {
-  display: flex;
-  align-items: center;
-  font-size: 20px; /* Slightly smaller font size */
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  margin-right: auto;
-  margin-left: 10px;
+  font-size: 24px; /* Increase font size for better visibility */
+  font-weight: bold; /* Make the logo text bold */
+  color: white; /* Set logo text color to white */
+  text-decoration: none; /* Remove underline from logo link */
+  margin-bottom: 10px; /* Add space below the logo */
 }
 
 /* Nav Link: Offers */
@@ -57,6 +56,8 @@ nav a {
   border-radius: 5px;
   text-align: center;
   width: 100%; /* Adjust width to content */
+  margin-top: 10px; /* Add top margin for spacing */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
 }
 
 /* Nav Link: Book Now */
@@ -70,6 +71,9 @@ nav a {
   border-radius: 5px;
   text-align: center;
   width: 100%; /* Adjust width to content */
+  margin-top: 10px; /* Add top margin for spacing */
+  margin-bottom: 10px; /* Add bottom margin for spacing */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
 }
 
 /* Nav Link: About Us */
@@ -87,20 +91,25 @@ nav a {
 
 /* Form Style */
 #travelInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 0.5%;
-  margin-bottom: 5%;
-  font-size: 18px; /* Slightly smaller font size */
-  padding: 0 10px; /* Add horizontal padding */
+  margin: 2% auto; /* Center the form with top and bottom margins */
+  padding: 20px; /* Add padding for better spacing */
+  max-width: 600px; /* Set a maximum width for the form */
+  background-color: #f9f9f9; /* Light background color for contrast */
+  border: 1px solid #000000; /* Set border color */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add subtle shadow for depth */
+  font-family: Arial, sans-serif; /* Set a clean font */
+  font-size: 16px; /* Set font size */
+  color: #333; /* Set text color */
 }
 
 input, textarea, select {
-  display: inline-block;
-  border-color: black;
-  margin-bottom: 10px; /* Add some space below */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  width: 100%; /* Make input fields full width */
+  padding: 10px; /* Add padding for better spacing */
+  margin-bottom: 10px; /* Add space between fields */
+  border: 1px solid #000000; /* Set border color */
+  border-radius: 5px; /* Add rounded corners */
+  font-size: 16px; /* Set font size */
 }
 
 label { 
@@ -108,14 +117,15 @@ label {
 }
 
 fieldset {
-  border: 2px solid green; /* Set a green border */
-  padding: 10px; /* Add padding */
-  margin: 20px 0; /* Add margin */
+  border: 1px solid #000000; /* Set border color */
+  padding: 10px; /* Add padding inside fieldset */
+  margin-bottom: 20px; /* Add space below fieldset */
 }
 
 legend {
-  color: green; /* Style the legend text */
-  font-weight: bold; /* Make the legend text bold */
+  font-weight: bold; /* Make legend text bold */
+  font-size: 18px; /* Slightly larger font size */
+  color: green; /* Set legend text color to green */
 }
 .summary {
   margin-top: 2em;
@@ -124,40 +134,45 @@ legend {
 }
 
 button[type="submit"] {
-  border: 2px solid green;
-  padding: 10px 20px;
-  margin: 20px 0;
-  background-color: #f9f9f9;
-  color: green;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  width: 100%; /* Make button full width */
-  box-sizing: border-box;
+  background-color: #15cb4c; /* Set background color */
+  color: white; /* Set text color */
+  border: 2px solid white; /* Set border color */
+  padding: 10px 20px; /* Add padding */
+  font-size: 16px; /* Set font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-top: 20px; /* Add top margin */
+  width: auto; /* Reset width to auto */
+  display: inline-block; /* Make it an inline-block element */
+  text-align: center; /* Center text */
+  border-radius: 5px; /* Add rounded corners */
+  transition: background-color 0.3s, color 0.3s, border
 }
 
 button[type="submit"]:hover {
-  background-color: #e8f5e8;
+  background-color: #15cb4c; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+  border-color: white; /* Change border color on hover */
 }
 
 
 /* Footer Style */
 footer {
-  position: fixed;
+  position: fixed; /* Keep footer at the bottom */
   bottom: 0;
   width: 100%;
   background-color: #15cb4c;
   color: white;
   text-align: center;
-  padding: 10px 0;
+  padding: 10px;
+  font-size: 14px; /* Slightly smaller font size */
 }
 
 /*Media Changes - Tablet*/
 @media (min-width: 768px) {
   nav {
-    flex-direction: row; /* Change to horizontal layout on larger screens */
-    justify-content: space-between; /* Space items evenly */
+    flex-direction: row; /* Change to horizontal layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Center items vertically */
   }
   #logo {
     margin-right: auto; /* Push logo to the left */
@@ -166,7 +181,7 @@ footer {
     margin: 0 10px;
   }
   #travelInfo {
-    margin-top: 2%;
+    margin-top: 1%;
     margin-bottom: 5%;
     font-size: 20px; /* Slightly larger font size */
     padding: 0 20px; /* Add horizontal padding */
@@ -174,10 +189,13 @@ footer {
   input, textarea {
     width: 100%; /* Make input fields full width */
   }
-  select {
-	width: 20%
+  textarea {
+    height: 100px; /* Set a fixed height for textareas */
   }
-  
+  select {
+	  width: 20%
+  }
+
   fieldset > label > input{
 	  width: 20%
   }
@@ -187,13 +205,9 @@ footer {
     margin: 20px 0;
   }
   footer {
-    position: static; /* Reset footer position */
+    position: fixed; /* Reset footer position */
     margin-top: 20px;
   }
-  #editOptions {
-    display: none;
-  }
-  
 }
 
 /*Media Changes - Desktop*/
@@ -205,12 +219,10 @@ footer {
     padding: 0 30px; /* Add horizontal padding */
   }
   #offers, #bookNow, #aboutUs {
-    margin: 0 10px;
-	width: fit-content;
+    margin: 0 20px; /* Increase horizontal margin */
   }
   input, textarea, select {
     width: 100%; /* Make input fields full width */
-    max-width: 600px; /* Set a maximum width */
   }
   button[type="submit"] {
     width: auto; /* Reset button width */
@@ -218,7 +230,7 @@ footer {
     margin: 20px 0;
   }
   footer {
-    position: static; /* Reset footer position */
+    position: fixed; /* Reset footer position */
     margin-top: 20px;
   }
   #editOptions {
