@@ -168,6 +168,14 @@ document.getElementById("editOptions").addEventListener("click", editOptionsClic
 
 // Function to handle edit options button click to allow changes to the events once the season and trip type have been selected
 function editOptionsClick() {
+  this.preventDefault(); // Prevent default button behavior
+  // Disable the edit options button to prevent multiple clicks
+  this.disabled = true;
+
+  // Enable the checkboxes for events and trip formats
+  const editOptionsButton = document.getElementById("editOptions");
+
+  // Get all checkboxes for events and trip formats
   const events = document.querySelectorAll("input[name='events']");
   const tripFormats = document.querySelectorAll("input[name='tripFormat']");
   
@@ -189,6 +197,7 @@ function editOptionsClick() {
 
 // Function to handle save changes button click
 function saveChangesClick() {
+  this.preventDefault(); // Prevent default button behavior
   const events = document.querySelectorAll("input[name='events']");
   const tripFormats = document.querySelectorAll("input[name='tripFormat']");
   
