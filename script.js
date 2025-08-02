@@ -1,3 +1,9 @@
+/* 
+  SDEV 153 IVY Final Project - script.js
+  Sebastian Delgado
+  08/01/2025
+*/
+
 function updateEvents() {
   const events = document.querySelectorAll("input[name='events']");
   const tripFormats = document.querySelectorAll("input[name='tripFormat']")

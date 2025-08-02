@@ -1,17 +1,25 @@
+/* 
+  SDEV 153 IVY Final Project - style.css
+  Sebastian Delgado
+  August 1, 2025
+*/
+
 /* =========================================================
   Base Styles
 ========================================================= */
 
 /* Reset & Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
   width: 100%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
 
 img {
   max-width: 100%;
