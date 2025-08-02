@@ -97,14 +97,13 @@ nav a:hover,
   box-sizing: border-box;
 }
 
-#offers, #bookNow {
+#offers, #bookNow, #aboutUs {
   margin-top: 10px;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-#bookNow {
-  margin-bottom: 10px;
-}
+
+
 
 /* =========================================================
   Main Content
@@ -231,20 +230,23 @@ label > span::after {
   Tablet Styles (min-width: 768px)
 ------------------------------- */
 @media (min-width: 768px) {
+  /* =========================================================
+    Responsive Navigation
+  ========================================================= */
   nav {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-  }
-  nav a {
-    font-size: 18px;
-    padding: 10px 20px;
-    
   }
   #logo {
     margin-right: 40px;
     margin-bottom: 0;
+  }
+  nav a {
+    font-size: 18px;
+    padding: 10px 20px;
+    width: auto;
   }
   #offers, #bookNow, #aboutUs {
     margin: 0 10px;
