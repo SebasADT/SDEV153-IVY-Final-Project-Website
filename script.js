@@ -165,9 +165,12 @@ document.querySelectorAll("input[name='tripFormat']").forEach(radio =>
 const editOptionsButton = document.getElementById("editOptions");
 const saveChangesButton = document.getElementById("saveChanges");
 editOptionsButton.disabled = true; // Initially disable the button until season and trip type are selected
-saveChangesButton.disabled = true; // Initially disable the save changes button
+ 
+// Initially disable the save changes button and hide it
+saveChangesButton.style.display = "none"; // Hide the button
+saveChangesButton.disabled = true; //Disable it
 
-document.editOptionsButton.addEventListener("click", editOptionsClick);
+
 // Enable the edit options button when a season and trip type are selected
 document.querySelectorAll("input[name='season'], input[name='tripFormat']").forEach(input => {
   input.addEventListener("change", () => {
