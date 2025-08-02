@@ -15,15 +15,17 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
   height: 100%;
   width: 100%;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
 }
-
 
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* =========================================================
@@ -32,20 +34,20 @@ img {
 
 /* Navigation Bar */
 nav {
-  display: block;
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #15cb4c;
-  padding: 10px;
+  padding: 10px 0;
   position: relative;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 
 /* Navigation Links */
 nav a {
   font-size: 16px;
-  align-items: center;
   display: inline-block;
   padding: 10px 15px;
   border-radius: 5px;
@@ -53,8 +55,16 @@ nav a {
   font-weight: bold;
   color: white;
   text-decoration: none;
-  margin: 0, 5px;
+  margin: 0 5px;
   transition: color 0.3s, background-color 0.3s;
+}
+
+nav a:hover,
+#offers:hover,
+#bookNow:hover,
+#aboutUs:hover {
+  background-color: #13b443;
+  color: #fff;
 }
 
 /* Logo */
@@ -64,6 +74,7 @@ nav a {
   color: white;
   text-decoration: none;
   margin-bottom: 10px;
+  margin-right: auto;
 }
 
 /* Individual Nav Links */
@@ -76,7 +87,9 @@ nav a {
   padding: 5px 10px;
   border-radius: 5px;
   text-align: center;
-  width: 100%;
+  width: auto;
+  margin: 0 5px;
+  display: inline-block;
 }
 
 #offers, #bookNow {
@@ -86,6 +99,15 @@ nav a {
 
 #bookNow {
   margin-bottom: 10px;
+}
+
+/* =========================================================
+  Main Content
+========================================================= */
+main {
+  min-height: calc(100vh - 60px - 40px); /* header + footer */
+  padding: 20px 10px 60px 10px;
+  box-sizing: border-box;
 }
 
 /* =========================================================
@@ -100,7 +122,6 @@ nav a {
   border: 1px solid #000000;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-family: Arial, sans-serif;
   font-size: 16px;
   color: #333;
 }
@@ -112,10 +133,12 @@ input, textarea, select {
   border: 1px solid #000000;
   border-radius: 5px;
   font-size: 16px;
+  background: #fff;
 }
 
 label {
   margin-bottom: 5px;
+  display: block;
 }
 
 fieldset {
@@ -140,7 +163,7 @@ legend {
   Buttons
 ========================================================= */
 
-button[type="submit"] {
+button[type="submit"], .btn {
   background-color: #15cb4c;
   color: white;
   border: 2px solid white;
@@ -155,8 +178,8 @@ button[type="submit"] {
   transition: background-color 0.3s, color 0.3s, border;
 }
 
-button[type="submit"]:hover {
-  background-color: #15cb4c;
+button[type="submit"]:hover, .btn:hover {
+  background-color: #13b443;
   color: white;
   border-color: white;
 }
@@ -167,13 +190,16 @@ button[type="submit"]:hover {
 
 footer {
   position: fixed;
+  left: 0;
   bottom: 0;
   width: 100%;
   background-color: #15cb4c;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 10px 0;
   font-size: 14px;
+  z-index: 100;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
 }
 
 /* =========================================================
@@ -200,50 +226,46 @@ label > span::after {
   Tablet Styles (min-width: 768px)
 ------------------------------- */
 @media (min-width: 768px) {
-  /* Navigation */
   nav {
-   flex-direction: row;
-   justify-content: space-between;
-   align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 40px;
   }
   #logo {
-   margin-right: auto;
+    margin-right: 40px;
+    margin-bottom: 0;
   }
   #offers, #bookNow, #aboutUs {
-   margin: 0 10px;
+    margin: 0 10px;
+    width: auto;
   }
-
-  /* Form */
+  main {
+    padding: 40px 40px 80px 40px;
+  }
   #travelInfo {
-   margin-top: 1%;
-   margin-bottom: 5%;
-   font-size: 20px;
-   padding: 0 20px;
-  }
-  input, textarea {
-   width: 100%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    font-size: 18px;
+    padding: 20px 30px;
   }
   textarea {
-   height: 100px;
+    height: 100px;
   }
   select {
-   width: 20%;
+    width: 50%;
   }
   fieldset > label > input {
-   width: 20%;
+    width: 50%;
   }
-
-  /* Button */
-  button[type="submit"] {
-   width: auto;
-   padding: 10px 20px;
-   margin: 20px 0;
+  button[type="submit"], .btn {
+    width: auto;
+    padding: 10px 20px;
+    margin: 20px 0;
   }
-
-  /* Footer */
   footer {
-   position: fixed;
-   margin-top: 20px;
+    font-size: 15px;
+    padding: 15px 0;
   }
 }
 
@@ -251,35 +273,37 @@ label > span::after {
   Desktop Styles (min-width: 1024px)
 ------------------------------- */
 @media (min-width: 1024px) {
-  /* Form */
-  #travelInfo {
-   margin-top: 2%;
-   margin-bottom: 5%;
-   font-size: 22px;
-   padding: 0 30px;
+  nav {
+    padding: 10px 80px;
+  }
+  #logo {
+    margin-right: 80px;
   }
   #offers, #bookNow, #aboutUs {
-   margin: 0 20px;
+    margin: 0 20px;
+  }
+  main {
+    padding: 60px 120px 100px 120px;
+  }
+  #travelInfo {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-size: 20px;
+    padding: 30px 40px;
   }
   input, textarea, select {
-   width: 100%;
+    width: 100%;
   }
-
-  /* Button */
-  button[type="submit"] {
-   width: auto;
-   padding: 10px 20px;
-   margin: 20px 0;
+  button[type="submit"], .btn {
+    width: auto;
+    padding: 10px 30px;
+    margin: 20px 0;
   }
-
-  /* Footer */
   footer {
-   position: fixed;
-   margin-top: 20px;
+    font-size: 16px;
+    padding: 18px 0;
   }
-
-  /* Hide Edit Options */
   #editOptions {
-   display: none;
+    display: none;
   }
 }
