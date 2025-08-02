@@ -80,6 +80,10 @@ nav a:hover,
   width: 90vw;
   text-align: center;
 }
+#logo img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
 
 /* Individual Nav Links */
 #offers, #bookNow, #aboutUs {
@@ -242,6 +246,10 @@ label > span::after {
   #logo {
     margin-right: 40px;
     margin-bottom: 0;
+  }
+  nav a span {
+    display: inline-block;
+    margin-left: 10px;
   }
   nav a {
     font-size: 18px;
